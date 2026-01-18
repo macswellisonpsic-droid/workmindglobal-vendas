@@ -101,6 +101,7 @@ const searchInput = document.getElementById('search-input');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
 function renderProducts(list) {
+    if(!productsGrid) return;
     productsGrid.innerHTML = list.map(p => `
         <div class="product-card">
             <div class="product-body">
@@ -127,11 +128,13 @@ function renderProducts(list) {
 }
 
 // Filtros e Busca
-searchInput.addEventListener('input', (e) => {
-    const term = e.target.value.toLowerCase();
-    const filtered = products.filter(p => p.name.toLowerCase().includes(term) || p.desc.toLowerCase().includes(term));
-    renderProducts(filtered);
-});
+if(searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = products.filter(p => p.name.toLowerCase().includes(term) || p.desc.toLowerCase().includes(term));
+        renderProducts(filtered);
+    });
+}
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -194,12 +197,13 @@ function closeModal() {
     modal.setAttribute('aria-hidden', 'true');
 }
 
-closeBtn.addEventListener('click', closeModal);
-modalOverlay.addEventListener('click', closeModal);
+if(closeBtn) closeBtn.addEventListener('click', closeModal);
+if(modalOverlay) modalOverlay.addEventListener('click', closeModal);
 
 // --- Renderização de Planos ---
 function renderPlans() {
     const grid = document.getElementById('plans-grid');
+    if(!grid) return;
     grid.innerHTML = plans.map(plan => `
         <div class="plan-card ${plan.highlight ? 'highlight' : ''}">
             ${plan.highlight ? '<span class="badge" style="margin-bottom:1rem; display:inline-block;">Recomendado</span>' : ''}
@@ -218,6 +222,7 @@ function renderPlans() {
 // --- Renderização FAQ ---
 function renderFAQ() {
     const list = document.getElementById('faq-list');
+    if(!list) return;
     list.innerHTML = faqs.map((item, index) => `
         <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
@@ -276,6 +281,8 @@ function initMobileMenu() {
     const btn = document.getElementById('mobile-btn');
     const menu = document.getElementById('nav-menu');
     
+    if(!btn || !menu) return;
+
     btn.addEventListener('click', () => {
         menu.classList.toggle('mobile-active');
     });
