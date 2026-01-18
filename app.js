@@ -1,24 +1,29 @@
-/* --- DADOS EDITÁVEIS --- */
+/* --- DADOS EDITÁVEIS (Configure seus links aqui) --- */
+const CONFIG = {
+    whatsappNumber: "5581997243253", // Seu número com DDI e DDD
+    calendlyUrl: "https://calendly.com/SEU-LINK-AQUI/demo", // << COLE SEU LINK REAL DO CALENDLY AQUI
+    formspreeUrl: "https://formspree.io/f/xkoojory" // Seu endpoint do form
+};
 
-// 1. Lista de Produtos
+// 1. Lista de Produtos (Foco: WorkMind SST Instalável)
 const products = [
     {
         id: 1,
         name: "WorkMind SST",
         category: "Segurança",
-        desc: "Ferramenta para emissão de documentos e avaliação de riscos psicossociais, com organização técnica e conformidade.",
-        features: ["Avaliação de Riscos Psicossociais", "Emissão de Documentos Técnicos", "Gestão de Prazos Legais", "Conformidade com Normas"],
-        audience: "Engenheiros, Técnicos de Segurança e Psicólogos",
+        desc: "Software instalável para PC. A solução offline para Avaliação de Riscos Psicossociais, emissão de laudos técnicos e conformidade NR-01.",
+        features: ["Software Desktop (Windows)", "Funcionamento 100% Offline", "Avaliação de Riscos (NR-01)", "Relatórios Técnicos Automáticos", "Backup Local Seguro"],
+        audience: "Engenheiros de Segurança, Técnicos e Psicólogos",
         status: "Finalizada",
-        price: "Ver Planos",
-        badge: "Disponível"
+        price: "A partir de R$ 349/mês",
+        badge: "Disponível Agora"
     },
     {
         id: 2,
         name: "WorkMind PSI",
         category: "Psicologia",
-        desc: "Sistema focado na gestão clínica e prontuários eletrônicos para profissionais da psicologia.",
-        features: ["Prontuário Digital", "Agenda Integrada", "Emissão de Documentos", "Segurança de Dados" , "Evolução Digital"],
+        desc: "Sistema desktop para gestão clínica. Prontuários eletrônicos locais, sem dados na nuvem, garantindo sigilo total.",
+        features: ["Instalação no Computador", "Prontuário Digital Offline", "Agenda Inteligente", "Emissão de Documentos"],
         audience: "Psicólogos Clínicos",
         status: "Em Construção",
         price: "Em breve",
@@ -28,8 +33,8 @@ const products = [
         id: 3,
         name: "WorkMind HR/DP",
         category: "RH/DP",
-        desc: "Solução para automação de rotinas de Departamento Pessoal e Recursos Humanos.",
-        features: ["Controle de Ponto", "Gestão de Férias", "Admissão Digital", "Indicadores de RH"],
+        desc: "Solução instalável para automação de rotinas de Departamento Pessoal.",
+        features: ["Controle de Ponto Offline", "Gestão de Férias", "Admissão Digital", "Indicadores de Turnover"],
         audience: "Gestores de RH e DP",
         status: "Em Construção",
         price: "Em breve",
@@ -39,47 +44,103 @@ const products = [
         id: 4,
         name: "WorkMind Cogni",
         category: "Gestão",
-        desc: "Ferramenta de apoio para psicólogos da terapia cognitivo comportamental, para auxiliar na organização de documentos.",
-        features: ["Emissão de Documentos", "Controle de Agendamento", "Sugestões de Ferramentas", "Integração de Dados"],
-        audience: "Diretores e Consultores",
+        desc: "Ferramenta de apoio para Terapia Cognitivo Comportamental, instalada diretamente na sua máquina.",
+        features: ["Estruturação de Sessão", "Registro de Tarefas", "Biblioteca Local"],
+        audience: "Psicólogos TCC",
         status: "Em Construção",
         price: "Em breve",
         badge: null
     }
 ];
 
-// 2. Lista de Planos
+// 2. Lista de Planos (Correção: Termos Instaláveis)
 const plans = [
     {
         name: "Licença Mensal",
-        price: "R$ 199",
+        price: "R$ 349",
         period: "/mês",
-        features: ["Acesso total à ferramenta", "Suporte via E-mail", "Atualizações Mensais", "Sem fidelidade"],
+        features: ["Licença de uso para 1 Computador", "Suporte técnico via E-mail", "Atualizações do Software", "Sem fidelidade"],
         highlight: false
     },
     {
         name: "Licença Anual",
-        price: "R$ 1.999",
+        price: "R$ 3.490",
         period: "/ano",
-        features: ["2 meses grátis (desconto)", "Acesso total à ferramenta", "Suporte Prioritário", "Atualizações Imediatas", "Treinamento de uso"],
-        highlight: true // Plano destaque
+        features: ["2 meses grátis (Economia)", "Instalação Assistida Remota", "Suporte Prioritário (WhatsApp)", "Treinamento de uso", "Atualizações Antecipadas"],
+        highlight: true // Destaque
     },
     {
         name: "Licença Vitalícia",
-        price: "R$ 5.999",
+        price: "R$ 9.900",
         period: "(Único)",
-        features: ["Pagamento Único", "Acesso perpétuo à versão", "1 ano de suporte incluso", "Customização Básica", "Ideal para empresas"],
+        features: ["Pagamento Único (Sem mensalidade)", "Uso Perpétuo da Versão", "1 ano de suporte incluso", "Instalação Multi-Máquinas (Local)", "Ideal para Clínicas e Empresas"],
         highlight: false
     }
 ];
 
-// 3. Perguntas Frequentes (FAQ)
+// 3. Perguntas Frequentes (FAQ - Correção Offline/Instalável)
 const faqs = [
-    { q: "Quais ferramentas estão disponíveis hoje?", a: "Atualmente, a WorkMind SST está finalizada e pronta para uso. As ferramentas WorkMind PSI, HR/DP e Cogni estão em fase de construção e testes." },
-    { q: "Como funciona o licenciamento?", a: "Você adquire uma licença de uso para a ferramenta específica (ex: SST). Oferecemos planos mensais (recorrência), anuais (com desconto) ou licença vitalícia (compra única)." },
-    { q: "Preciso instalar algo no computador?", a: "Não. Nossas soluções são desenvolvidas para rodar diretamente no navegador, garantindo leveza e acessibilidade de qualquer lugar." },
-    { q: "Existe suporte técnico?", a: "Sim. Todos os planos incluem suporte técnico para dúvidas de uso e correções. O plano Anual e Vitalício possuem prioridade no atendimento." },
-    { q: "Os dados são seguros?", a: "Absolutamente. Utilizamos protocolos modernos de segurança e criptografia para garantir que as informações técnicas e pessoais estejam protegidas." }
+    { q: "A WorkMind SST precisa de internet para funcionar?", a: "Não. O software é instalado diretamente no seu computador (Windows) e funciona 100% offline. Você não depende de internet para acessar seus dados ou gerar laudos." },
+    { q: "Onde ficam salvos os meus dados?", a: "Como é um software instalável, todos os dados ficam salvos localmente no seu próprio computador. Isso garante total privacidade e conformidade, pois nenhuma informação sai da sua máquina." },
+    { q: "Quais ferramentas posso instalar hoje?", a: "A WorkMind SST está finalizada e com instalador disponível imediato. As soluções PSI, HR e Cogni estão em fase de desenvolvimento." },
+    { q: "Como funciona a Licença Vitalícia?", a: "Você adquire o instalador definitivo. Paga uma única vez e o software é seu para sempre naquela versão, sem custos mensais recorrentes." },
+    { q: "Preciso de um servidor para usar?", a: "Não. A ferramenta é leve e roda em computadores comuns (Desktop ou Notebook). Não há necessidade de servidores ou infraestrutura complexa." }
+];
+
+// 4. Dados da Consultoria
+const consultancyServices = [
+    {
+        title: "Consultoria Estratégica RH",
+        icon: "ph-users-four",
+        items: [
+            "Diagnóstico Organizacional Completo",
+            "Estruturação de Cargos e Salários",
+            "Mapeamento de Processos de DP",
+            "Recrutamento & Seleção Técnico"
+        ]
+    },
+    {
+        title: "Avaliação de Riscos (NR-01)",
+        icon: "ph-warning",
+        items: [
+            "Levantamento técnico in loco",
+            "Aplicação de instrumentos validados",
+            "Emissão de Laudo Técnico",
+            "Plano de Ação para Conformidade"
+        ]
+    },
+    {
+        title: "Mentoria Profissional",
+        icon: "ph-chalkboard-teacher",
+        items: [
+            "Mentoria para Psicólogos Organizacionais",
+            "Supervisão de casos técnicos",
+            "Orientação de Carreira e Negócios"
+        ]
+    }
+];
+
+const consultancyModels = [
+    {
+        name: "Consultoria Pontual",
+        price: "A partir de R$ 199", // Hora técnica
+        features: ["Resolução de dúvidas específicas", "Parecer técnico", "Cobrança por hora", "Ideal para urgências"]
+    },
+    {
+        name: "Projeto Fechado",
+        price: "A partir de R$ 2.999",
+        features: ["Escopo definido (Início/Meio/Fim)", "Cronograma de entregas", "Diagnóstico + Execução", "Pagamento parcelado"]
+    },
+    {
+        name: "Mentoria Recorrente",
+        price: "A partir de R$ 599",
+        features: ["Encontros quinzenais/mensais", "Acompanhamento de carreira", "Supervisão técnica", "Acesso direto ao consultor"]
+    },
+    {
+        name: "Assessoria Mensal",
+        price: "A partir de R$ 499",
+        features: ["Contrato mensal", "Suporte contínuo ao RH/SST", "Reuniões periódicas", "Terceirização de demandas"]
+    }
 ];
 
 /* --- LÓGICA DO SITE --- */
@@ -93,7 +154,30 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimation();
     initMobileMenu();
     initContactForm();
+    initGlobalLinks();
 });
+
+// --- Gerenciador de Links Dinâmicos ---
+function initGlobalLinks() {
+    // Atualiza botões de Demo
+    document.querySelectorAll('.js-link-demo').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if(CONFIG.calendlyUrl.includes("SEU-LINK-AQUI")) {
+                // Fallback se o usuário não configurou: Manda pro WhatsApp
+                const msg = encodeURIComponent("Olá Macs, gostaria de agendar uma demonstração do software WorkMind SST.");
+                window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${msg}`, '_blank');
+            } else {
+                window.open(CONFIG.calendlyUrl, '_blank');
+            }
+        });
+    });
+
+    // Atualiza botões de WhatsApp
+    document.querySelectorAll('.js-link-whatsapp').forEach(btn => {
+        btn.href = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent("Olá, gostaria de saber mais sobre a instalação da WorkMind Global.")}`;
+    });
+}
 
 // --- Renderização de Produtos ---
 const productsGrid = document.getElementById('products-grid');
@@ -117,9 +201,9 @@ function renderProducts(list) {
             </div>
             <div class="product-footer">
                 <span style="font-weight:bold; font-size:0.9rem;">
-                    ${p.status === 'Finalizada' ? '✅ Finalizada' : '🚧 Em Construção'}
+                    ${p.status === 'Finalizada' ? '✅ Disponível' : '🚧 Em Breve'}
                 </span>
-                <button onclick="openModal(${p.id})" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:0.8rem;">
+                <button onclick="openModal(${p.id})" class="btn ${p.status === 'Finalizada' ? 'btn-primary' : 'btn-outline'}" style="padding:0.4rem 1rem; font-size:0.8rem;">
                     ${p.status === 'Finalizada' ? 'Ver Detalhes' : 'Avise-me'}
                 </button>
             </div>
@@ -166,17 +250,17 @@ window.openModal = (id) => {
     document.getElementById('modal-features').innerHTML = product.features.map(f => `<li>${f}</li>`).join('');
     document.getElementById('modal-audience').innerText = product.audience;
     
-    // Atualiza Status Texto no Modal
-    const statusText = product.status === 'Finalizada' ? '✅ Disponível para Uso' : '🚧 Em fase de desenvolvimento';
+    // Atualiza Status
+    const statusText = product.status === 'Finalizada' ? '✅ Instalador Disponível' : '🚧 Em desenvolvimento';
     document.getElementById('modal-status').innerText = statusText;
     
-    // Configura botão do modal
+    // CTA do Modal
     const ctaBtn = document.getElementById('modal-cta');
     let msg = "";
     
     if (product.status === 'Finalizada') {
-        msg = `Olá, tenho interesse na licença da ferramenta ${product.name}.`;
-        ctaBtn.innerText = "Adquirir Licença";
+        msg = `Olá Macs, tenho interesse em instalar o software ${product.name}. Gostaria de saber os passos para contratar.`;
+        ctaBtn.innerText = "Adquirir Instalador";
         ctaBtn.classList.remove('btn-outline');
         ctaBtn.classList.add('btn-primary');
     } else {
@@ -186,7 +270,8 @@ window.openModal = (id) => {
         ctaBtn.classList.add('btn-outline');
     }
 
-    ctaBtn.href = `https://wa.me/5581997243253?text=${encodeURIComponent(msg)}`;
+    ctaBtn.href = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+    ctaBtn.target = "_blank";
 
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
@@ -212,11 +297,43 @@ function renderPlans() {
             <ul class="plan-features">
                 ${plan.features.map(f => `<li><i class="ph ph-check-circle"></i> ${f}</li>`).join('')}
             </ul>
-            <a href="https://wa.me/5581997243253?text=Olá, gostaria de saber mais sobre o plano ${plan.name} para a ferramenta WorkMind SST" target="_blank" class="btn ${plan.highlight ? 'btn-primary' : 'btn-outline'} full-width">
-                Falar no WhatsApp
+            <a href="https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent('Olá, tenho interesse no plano ' + plan.name + ' da WorkMind SST.')}" target="_blank" class="btn ${plan.highlight ? 'btn-primary' : 'btn-outline'} full-width">
+                Contratar Agora
             </a>
         </div>
     `).join('');
+}
+
+// --- Renderização da Consultoria ---
+function renderConsultancy() {
+    const servicesGrid = document.getElementById('consultoria-services-grid');
+    if (servicesGrid) {
+        servicesGrid.innerHTML = consultancyServices.map(service => `
+            <div class="card-solucao fade-in">
+                <div class="icon-box"><i class="ph ${service.icon}"></i></div>
+                <h3>${service.title}</h3>
+                <ul style="color:var(--text-muted); font-size:0.95rem; margin-top:1rem; list-style:none;">
+                    ${service.items.map(item => `<li style="margin-bottom:0.5rem; display:flex; gap:0.5rem;"><span style="color:var(--primary)">•</span> ${item}</li>`).join('')}
+                </ul>
+            </div>
+        `).join('');
+    }
+
+    const modelsGrid = document.getElementById('consultoria-models-grid');
+    if (modelsGrid) {
+        modelsGrid.innerHTML = consultancyModels.map(model => `
+            <div class="plan-card fade-in">
+                <h3>${model.name}</h3>
+                <div class="plan-price" style="font-size:1.5rem;">${model.price}</div>
+                <ul class="plan-features">
+                    ${model.features.map(f => `<li><i class="ph ph-check-circle"></i> ${f}</li>`).join('')}
+                </ul>
+                <a href="https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent('Olá, tenho interesse no modelo de consultoria: ' + model.name)}" target="_blank" class="btn btn-outline full-width">
+                    Solicitar Proposta
+                </a>
+            </div>
+        `).join('');
+    }
 }
 
 // --- Renderização FAQ ---
@@ -287,7 +404,6 @@ function initMobileMenu() {
         menu.classList.toggle('mobile-active');
     });
 
-    // Fecha ao clicar em um link
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             menu.classList.remove('mobile-active');
@@ -295,7 +411,7 @@ function initMobileMenu() {
     });
 }
 
-// --- Formulário de Contato (Mailto) ---
+// --- Formulário de Contato ---
 function initContactForm() {
     const form = document.getElementById('contactForm');
     const btn = document.getElementById('submit-btn');
@@ -305,16 +421,13 @@ function initContactForm() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // --- COLE SEU LINK DO FORMSPREE AQUI ---
-        const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkoojory"; 
-
         btn.disabled = true;
         btn.innerText = "Enviando...";
 
         const formData = new FormData(form);
         
         try {
-            const response = await fetch(FORMSPREE_ENDPOINT, {
+            const response = await fetch(CONFIG.formspreeUrl, {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -323,115 +436,16 @@ function initContactForm() {
             });
 
             if (response.ok) {
-                // Feedback de Sucesso
                 alert("Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.");
                 form.reset();
             } else {
-                // Erro do Servidor
                 alert("Ops! Ocorreu um erro ao enviar. Por favor, tente novamente ou use o WhatsApp.");
             }
         } catch (error) {
-            // Erro de Conexão
             alert("Erro de conexão. Verifique sua internet.");
         } finally {
             btn.disabled = false;
             btn.innerText = "Enviar Mensagem";
         }
     });
-}
-
-// 4. Dados da Consultoria (ATUALIZADO)
-const consultancyServices = [
-    {
-        title: "Consultoria em RH",
-        icon: "ph-users-four",
-        items: [
-            "Diagnóstico Organizacional",
-            "Estruturação de RH e DP",
-            "Mapeamento e Padronização de Processos",
-            "Recrutamento & Seleção Estratégico",
-            "Treinamento e Desenvolvimento",
-            "Avaliação de Desempenho",
-            "Cargos, Salários e Carreira",
-            "Indicadores e Relatórios Gerenciais"
-        ]
-    },
-    {
-        title: "Avaliação de Riscos Psicossociais (NR-01)",
-        icon: "ph-brain",
-        items: [
-            "Levantamento técnico",
-            "Aplicação de instrumentos",
-            "Relatório técnico",
-            "Plano de ação",
-            "Evidências e conformidade legal"
-        ]
-    },
-    {
-        title: "Assessoria / Mentoria Profissional",
-        icon: "ph-chalkboard-teacher",
-        items: [
-            "Acompanhamento contínuo",
-            "Mentoria estratégica",
-            "Suporte técnico",
-            "Orientação em boas práticas"
-        ]
-    }
-];
-
-const consultancyModels = [
-    {
-        name: "Pacote Mensal",
-        price: "Sob Consulta",
-        features: ["Acompanhamento contínuo", "Reuniões periódicas", "Suporte prioritário", "Relatórios de progresso"]
-    },
-    {
-        name: "Projeto Fechado",
-        price: "Sob Consulta",
-        features: ["Escopo definido", "Cronograma fixo", "Entrega pontual", "Diagnóstico + Execução"]
-    },
-    {
-        name: "Consultoria por Demanda",
-        price: "Sob Consulta",
-        features: ["Hora técnica", "Pareceres específicos", "Flexibilidade total", "Ideal para dúvidas pontuais"]
-    },
-    {
-        name: "Mentoria Recorrente",
-        price: "Sob Consulta",
-        features: ["Encontros online", "Foco em liderança", "Resolução de conflitos", "Desenvolvimento de Carreira"]
-    }
-];
-
-// Função de Renderização da Consultoria
-function renderConsultancy() {
-    // Renderiza Serviços
-    const servicesGrid = document.getElementById('consultoria-services-grid');
-    if (servicesGrid) {
-        servicesGrid.innerHTML = consultancyServices.map(service => `
-            <div class="card-solucao fade-in">
-                <div class="icon-box"><i class="ph ${service.icon}"></i></div>
-                <h3>${service.title}</h3>
-                <ul style="color:var(--text-muted); font-size:0.95rem; margin-top:1rem; list-style:none;">
-                    ${service.items.map(item => `<li style="margin-bottom:0.5rem; display:flex; gap:0.5rem;"><span style="color:var(--primary)">•</span> ${item}</li>`).join('')}
-                </ul>
-            </div>
-        `).join('');
-    }
-
-    // Renderiza Modelos
-    const modelsGrid = document.getElementById('consultoria-models-grid');
-    if (modelsGrid) {
-        modelsGrid.innerHTML = consultancyModels.map(model => `
-            <div class="plan-card fade-in">
-                <h3>${model.name}</h3>
-                <div class="plan-price" style="font-size:1.5rem;">${model.price}</div>
-                <ul class="plan-features">
-                    ${model.features.map(f => `<li><i class="ph ph-check-circle"></i> ${f}</li>`).join('')}
-                </ul>
-                <a href="https://wa.me/5581997243253?text=Olá, tenho interesse no modelo de consultoria: ${model.name}" target="_blank" class="btn btn-outline full-width">
-                    Solicitar Orçamento
-                </a>
-            </div>
-        `).join('');
-    }
 }
