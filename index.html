@@ -38,7 +38,9 @@
                 <button id="theme-toggle" aria-label="Alternar Tema">
                     <i class="ph ph-moon"></i>
                 </button>
-                <a href="#contato" class="btn btn-primary sm-hidden">Solicitar Demo</a>
+                <a href="https://calendly.com/SEU-LINK-AQUI/demo" target="_blank" class="btn btn-primary sm-hidden">
+                    Solicitar Demo
+                </a>
                 <button id="mobile-btn" aria-label="Menu Mobile">
                     <i class="ph ph-list"></i>
                 </button>
@@ -56,7 +58,9 @@
                     Conheça nossa ferramenta líder em Segurança do Trabalho e acompanhe os próximos lançamentos.
                 </p>
                 <div class="hero-btns">
-                    <a href="#contato" class="btn btn-primary">Solicitar demonstração</a>
+                    <a href="https://calendly.com/SEU-LINK-AQUI/demo" target="_blank" class="btn btn-primary">
+                        Solicitar demonstração
+                    </a>
                     <a href="#solucoes" class="btn btn-outline">Ver soluções</a>
                 </div>
 
@@ -255,6 +259,10 @@
                     <p>Dúvidas sobre o licenciamento do WorkMind SST ou interesse nos próximos lançamentos?</p>
                     
                     <div class="contact-links">
+                        <a href="https://calendly.com/SEU-LINK-AQUI/demo" target="_blank" class="contact-btn calendly">
+                            <i class="ph ph-calendar-check"></i> Agendar Demonstração
+                        </a>
+
                         <a href="https://wa.me/5581997243253" target="_blank" class="contact-btn whatsapp">
                             <i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp
                         </a>
@@ -280,15 +288,15 @@
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Seu Nome</label>
-                            <input type="text" id="name" required placeholder="Digite seu nome">
+                            <input type="text" id="name" name="name" required placeholder="Digite seu nome">
                         </div>
                         <div class="form-group">
                             <label for="email">Seu E-mail</label>
-                            <input type="email" id="email" required placeholder="Digite seu e-mail">
+                             <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
                         </div>
                         <div class="form-group">
                             <label for="subject">Assunto</label>
-                            <select id="subject">
+                             <select id="subject" name="subject">
                                 <option value="Licenciamento SST">Licenciamento WorkMind SST</option>
                                 <option value="Lista de Espera">Lista de Espera (Outros)</option>
                                 <option value="Consultoria">Orçamento de Consultoria</option>
@@ -297,7 +305,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" rows="4" required placeholder="Como podemos ajudar?"></textarea>
+                             <textarea id="message" name="message" rows="4" required placeholder="Como podemos ajudar?"></textarea>
                         </div>
                         <button type="submit" id="submit-btn" class="btn btn-primary full-width">Enviar Mensagem</button>
                     </form>
