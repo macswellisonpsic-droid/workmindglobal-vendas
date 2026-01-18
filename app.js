@@ -52,21 +52,21 @@ const products = [
 const plans = [
     {
         name: "Licença Mensal",
-        price: "R$ 97",
+        price: "R$ 199",
         period: "/mês",
         features: ["Acesso total à ferramenta", "Suporte via E-mail", "Atualizações Mensais", "Sem fidelidade"],
         highlight: false
     },
     {
         name: "Licença Anual",
-        price: "R$ 997",
+        price: "R$ 1.999",
         period: "/ano",
         features: ["2 meses grátis (desconto)", "Acesso total à ferramenta", "Suporte Prioritário", "Atualizações Imediatas", "Treinamento de uso"],
         highlight: true // Plano destaque
     },
     {
         name: "Licença Vitalícia",
-        price: "Sob Consulta",
+        price: "R$ 5.999",
         period: "(Único)",
         features: ["Pagamento Único", "Acesso perpétuo à versão", "1 ano de suporte incluso", "Customização Básica", "Ideal para empresas"],
         highlight: false
