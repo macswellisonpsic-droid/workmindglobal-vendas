@@ -34,7 +34,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; } /* Fix: Prevent horizontal overflow globally */
 
 body {
     font-family: var(--font-sans);
@@ -42,6 +42,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden; /* Fix: Extra safety for mobile */
 }
 
 a { text-decoration: none; color: inherit; transition: 0.2s; }
@@ -49,7 +50,12 @@ ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
 /* --- Utilitários --- */
-.container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+.container { 
+    max-width: var(--container); 
+    margin: 0 auto; 
+    padding: 0 1.5rem; 
+    width: 100%; /* Fix: Ensure fluid width on mobile */
+}
 .section-padding { padding: 4rem 0; }
 .bg-alt { background-color: var(--bg-alt); }
 .text-center { text-align: center; }
@@ -85,10 +91,10 @@ img { max-width: 100%; display: block; }
 .header-content { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 .logo { 
     font-family: var(--font-serif); 
-    font-size: 1.8rem; /* Aumentado de 1.5rem para 1.8rem */
+    font-size: 1.8rem; 
     font-weight: 700; 
     white-space: nowrap; 
-    padding-right: 2rem; /* Adiciona espaço entre o nome e o início do menu */
+    padding-right: 1rem; /* Adjusted for smaller screens */
     display: flex;
     align-items: center;
 }
@@ -97,37 +103,54 @@ img { max-width: 100%; display: block; }
 #nav-menu { display: none; } /* Mobile hidden by default */
 .header-actions { 
     display: flex; 
-    gap: 1.2rem; 
+    gap: 1rem; /* Adjusted gap */
     align-items: center; 
-    margin-left: 1.5rem; /* Espaço entre o menu "Contato" e os ícones */
+    margin-left: auto; /* Push to right */
 }
 #theme-toggle, #mobile-btn { background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; }
+
+/* Mobile Adjustment for Very Small Screens */
+@media (max-width: 360px) {
+    .logo { font-size: 1.4rem; }
+    .header-actions { gap: 0.8rem; }
+}
 
 /* Menu Desktop */
 @media (min-width: 900px) {
     #nav-menu { display: block; }
     #nav-menu ul { 
         display: flex; 
-        gap: 1.5rem; /* Ajustado para dar respiro entre os itens */
-        align-items: center; /* Garante que o texto esteja centralizado verticalmente */
+        gap: 1.5rem; 
+        align-items: center; 
     }
     #nav-menu a:hover { color: var(--primary); }
     #mobile-btn { display: none; }
     .sm-hidden { display: inline-flex; }
 }
+
 /* --- Hero --- */
 #hero {
     min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: var(--header-height);
     overflow: hidden;
 }
-.hero-content { position: relative; z-index: 2; max-width: 700px; }
+.hero-content { position: relative; z-index: 2; max-width: 700px; width: 100%; }
 #hero h1 {
     font-family: var(--font-serif); font-size: 2.5rem; line-height: 1.2; margin: 1.5rem 0;
+}
+/* Responsive Typography for Mobile */
+@media (max-width: 480px) {
+    #hero h1 { font-size: 2rem; }
 }
 #hero h1 span { color: var(--primary); }
 .hero-sub { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
 .hero-btns { display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
-.hero-stats { display: flex; gap: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+.hero-stats { 
+    display: flex; 
+    gap: 2rem; 
+    border-top: 1px solid var(--border); 
+    padding-top: 1.5rem; 
+    flex-wrap: wrap; /* Fix: Allow wrapping on small mobile */
+}
 .stat-item strong { display: block; font-size: 1.2rem; color: var(--primary); }
 .stat-item span { font-size: 0.9rem; color: var(--text-muted); }
 
@@ -197,7 +220,8 @@ img { max-width: 100%; display: block; }
 .img-container { width: 100%; max-width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: var(--radius); border: 2px solid var(--primary); }
 .img-container img { width: 100%; height: 100%; object-fit: cover; }
 .author-caption { display: block; margin-top: 1rem; }
-.mission-values { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+.mission-values { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+@media (min-width: 480px) { .mission-values { grid-template-columns: 1fr 1fr; } } /* Mobile Fix */
 .mv-item h4 { color: var(--primary); margin-bottom: 0.5rem; }
 
 /* Depoimentos */
@@ -228,6 +252,11 @@ img { max-width: 100%; display: block; }
 .whatsapp { background: #25D366; color: white; }
 .email { background: var(--bg-card); border: 1px solid var(--border); }
 .linkedin { background: #0077B5; color: white; }
+
+/* Novo botão Calendly */
+.calendly { background: #42495d; color: white; border: 1px solid var(--border); }
+.calendly:hover { background: var(--primary); color: #000; }
+
 .attendance-pref { margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
 .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
 .tags span { background: var(--bg-alt); padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; border: 1px solid var(--border); }
@@ -273,9 +302,19 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
 .fade-in { opacity: 0; transform: translateY(30px); transition: 0.6s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-/* Mobile Menu Overlay Style */
+/* Mobile Menu Overlay Style - FIXED */
 #nav-menu.mobile-active {
-    display: block; position: fixed; top: var(--header-height); left: 0; width: 100%;
-    background: var(--bg-card); padding: 2rem; border-bottom: 1px solid var(--border);
+    display: block; 
+    position: fixed; 
+    top: var(--header-height); 
+    left: 0; 
+    width: 100%;
+    background: var(--bg-card); 
+    padding: 2rem; 
+    border-bottom: 1px solid var(--border);
+    /* Fix: Ensure menu is scrollable on small screens and doesn't get cut off */
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-#nav-menu.mobile-active ul { flex-direction: column; }
+#nav-menu.mobile-active ul { flex-direction: column; gap: 1.5rem; text-align: center; }
