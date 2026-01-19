@@ -60,7 +60,6 @@ img { max-width: 100%; display: block; }
 .bg-alt { background-color: var(--bg-alt); }
 .text-center { text-align: center; }
 .max-width-800 { max-width: 800px; margin: 0 auto; }
-.sm-hidden { display: none; } 
 
 /* Botões */
 .btn {
@@ -82,11 +81,11 @@ img { max-width: 100%; display: block; }
 /* --- Header --- */
 #header {
     position: fixed; top: 0; left: 0; width: 100%; height: var(--header-height);
-    background: rgba(15, 17, 21, 0.85); backdrop-filter: blur(10px);
+    background: rgba(15, 17, 21, 0.95); backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border); z-index: 1000;
     display: flex; align-items: center;
 }
-[data-theme="light"] #header { background: rgba(255, 255, 255, 0.85); }
+[data-theme="light"] #header { background: rgba(255, 255, 255, 0.95); }
 
 .header-content { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 .logo { 
@@ -99,12 +98,9 @@ img { max-width: 100%; display: block; }
 }
 .logo span { color: var(--primary); }
 
-#nav-menu { display: none; } 
-
-/* CORREÇÃO: Espaçamento no Menu Superior */
 .header-actions { 
     display: flex; 
-    gap: 1.5rem; /* Aumentado para separar os ícones */
+    gap: 1.2rem; 
     align-items: center; 
     margin-left: auto;
 }
@@ -113,23 +109,62 @@ img { max-width: 100%; display: block; }
     background: none; 
     border: none; 
     color: var(--text-main); 
-    font-size: 1.6rem; /* Ícones levemente maiores */
+    font-size: 1.6rem; 
     cursor: pointer; 
-    padding: 5px; /* Área de toque melhor */
+    padding: 5px; 
+    display: flex; align-items: center; justify-content: center;
 }
 
-@media (max-width: 360px) {
-    .logo { font-size: 1.4rem; }
-    .header-actions { gap: 1rem; }
+/* --- CONTROLE DE VISIBILIDADE RESPONSIVA --- */
+
+/* Por padrão (Mobile First), menu é escondido e botões desktop também */
+#nav-menu { display: none; }
+.desktop-only { display: none !important; } /* Esconde o botão do header no celular */
+.mobile-view-btn { display: block; margin-top: 1rem; } /* Mostra o botão dentro do menu no celular */
+
+/* --- MENU MOBILE (TELA CHEIA) --- */
+#nav-menu.mobile-active {
+    display: flex; 
+    position: fixed; 
+    top: var(--header-height); 
+    left: 0; 
+    width: 100%;
+    height: calc(100vh - var(--header-height)); /* Ocupa a tela toda abaixo do header */
+    background: var(--bg-body); 
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    z-index: 999;
+    overflow-y: auto;
 }
 
-/* Menu Desktop */
+#nav-menu.mobile-active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espaço generoso entre os links */
+    text-align: center;
+    width: 100%;
+}
+
+#nav-menu.mobile-active a {
+    font-size: 1.2rem; /* Texto maior para toque */
+    display: block;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* Linha sutil separando */
+}
+
+/* --- DESKTOP (Telas acima de 900px) --- */
 @media (min-width: 900px) {
     #nav-menu { display: block; }
     #nav-menu ul { display: flex; gap: 1.5rem; align-items: center; }
+    #nav-menu a { border-bottom: none; font-size: 1rem; padding: 0; }
     #nav-menu a:hover { color: var(--primary); }
-    #mobile-btn { display: none; }
-    .sm-hidden { display: inline-flex; }
+    
+    /* Configurações Desktop */
+    #mobile-btn { display: none; } /* Esconde hambúrguer */
+    .desktop-only { display: inline-flex !important; } /* Mostra botão no header */
+    .mobile-view-btn { display: none; } /* Esconde botão de dentro do menu */
 }
 
 /* --- Hero --- */
@@ -299,30 +334,3 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
 
 .fade-in { opacity: 0; transform: translateY(30px); transition: 0.6s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-/* CORREÇÃO: Menu Mobile - Fundo sólido e espaçamento */
-#nav-menu.mobile-active {
-    display: block; 
-    position: fixed; 
-    top: var(--header-height); 
-    left: 0; 
-    width: 100%;
-    background: var(--bg-card); /* Fundo sólido para cobrir o conteúdo */
-    padding: 2rem; 
-    border-bottom: 1px solid var(--border);
-    max-height: calc(100vh - var(--header-height));
-    overflow-y: auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    z-index: 1000;
-}
-/* Espaçamento entre as palavras do menu mobile */
-#nav-menu.mobile-active ul { 
-    flex-direction: column; 
-    gap: 2rem; /* Mais distância entre as palavras */
-    text-align: center; 
-}
-#nav-menu.mobile-active a {
-    font-size: 1.1rem; /* Letra um pouco maior no mobile */
-    display: block;
-    padding: 0.5rem;
-}
