@@ -25,9 +25,9 @@ const products = [
         desc: "Sistema desktop para gestão clínica. Prontuários eletrônicos locais, sem dados na nuvem, garantindo sigilo total.",
         features: ["Instalação no Computador", "Prontuário Digital Offline", "Agenda Inteligente", "Emissão de Documentos"],
         audience: "Psicólogos Clínicos",
-        status: "Em Construção",
-        price: "Em breve",
-        badge: null
+        status: "Finalizada",
+        price: "A partir de R$ 149/mês",
+        badge: "Disponível Agora"
     },
     {
         id: 3,
@@ -57,21 +57,21 @@ const products = [
 const plans = [
     {
         name: "Licença Mensal",
-        price: "R$ 349",
+        price: "R$ 149",
         period: "/mês",
         features: ["Licença de uso para 1 Computador", "Suporte técnico via E-mail", "Atualizações do Software", "Sem fidelidade"],
         highlight: false
     },
     {
         name: "Licença Anual",
-        price: "R$ 3.490",
+        price: "R$ 1.497",
         period: "/ano",
         features: ["2 meses grátis (Economia)", "Instalação Assistida Remota", "Suporte Prioritário (WhatsApp)", "Treinamento de uso", "Atualizações Antecipadas"],
         highlight: true // Destaque
     },
     {
         name: "Licença Vitalícia",
-        price: "R$ 9.900",
+        price: "R$ 2.497",
         period: "(Único)",
         features: ["Pagamento Único (Sem mensalidade)", "Uso Perpétuo da Versão", "1 ano de suporte incluso", "Instalação Multi-Máquinas (Local)", "Ideal para Clínicas e Empresas"],
         highlight: false
@@ -297,7 +297,7 @@ function renderPlans() {
             <ul class="plan-features">
                 ${plan.features.map(f => `<li><i class="ph ph-check-circle"></i> ${f}</li>`).join('')}
             </ul>
-            <a href="https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent('Olá, tenho interesse no plano ' + plan.name + ' da WorkMind SST.')}" target="_blank" class="btn ${plan.highlight ? 'btn-primary' : 'btn-outline'} full-width">
+            <a href="https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent('Olá, tenho interesse no plano ' + plan.name + ' da WorkMind Global.')}" target="_blank" class="btn ${plan.highlight ? 'btn-primary' : 'btn-outline'} full-width">
                 Contratar Agora
             </a>
         </div>
