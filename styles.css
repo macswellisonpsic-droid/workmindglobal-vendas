@@ -370,23 +370,84 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 1120px) {
+    #hero {
+        display: block;
+        min-height: auto;
+        padding-bottom: 4rem;
+        overflow: visible;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
     .hero-floating-card {
         position: relative;
         right: auto;
         top: auto;
         transform: none;
-        margin: 2rem 1.5rem 0 auto;
+        width: calc(100% - 3rem);
+        max-width: 720px;
+        margin: 2rem auto 0;
     }
-}
-@media (max-width: 640px) {
-    #hero { min-height: auto; padding-bottom: 4rem; }
-    .hero-floating-card {
-        width: auto;
-        margin: 2rem 1.5rem 0;
-    }
-    .hero-btns .btn { width: 100%; }
 }
 
+@media (max-width: 640px) {
+    #hero {
+        padding-top: calc(var(--header-height) + 1.25rem);
+        padding-bottom: 3.5rem;
+    }
+
+    .hero-floating-card {
+        width: calc(100% - 2rem);
+        max-width: none;
+        margin: 1.5rem auto 0;
+        padding: 1.2rem;
+        border-radius: 22px;
+    }
+
+    .floating-tool {
+        align-items: flex-start;
+    }
+
+    .floating-tool > div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .floating-tool strong,
+    .floating-tool span {
+        word-break: break-word;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    #hero h1 {
+        font-size: clamp(2.1rem, 9vw, 2.6rem);
+    }
+
+    .hero-sub {
+        font-size: 0.98rem;
+    }
+
+    .badge {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+}
 /* --- Seções gerais --- */
 .section-header {
     text-align: center;
