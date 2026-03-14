@@ -29,7 +29,7 @@ const softwareCatalog = [
         status: "available",
         statusLabel: "Disponível agora",
         badge: "Disponível agora",
-        priceFrom: "A partir de R$ 149/mês",
+        priceFrom: "A partir de R$ 99/mês",
         pricingTitle: "Licenciamento WorkMind PSI",
         pricingNote: "Ferramenta já disponível para contratação e ativação.",
         licensingModel: "Licenças com pacotes separados por período.",
@@ -38,7 +38,7 @@ const softwareCatalog = [
         plans: [
             {
                 name: "Licença Mensal",
-                price: "R$ 149",
+                price: "R$ 99",
                 period: "/mês",
                 subtitle: "Entrada mais leve para começar a usar imediatamente.",
                 features: [
@@ -52,7 +52,7 @@ const softwareCatalog = [
             },
             {
                 name: "Licença Trimestral",
-                price: "R$ 397",
+                price: "R$ 267",
                 period: "/trimestre",
                 subtitle: "Melhor equilíbrio entre investimento e continuidade.",
                 features: [
@@ -66,7 +66,7 @@ const softwareCatalog = [
             },
             {
                 name: "Licença Semestral",
-                price: "R$ 747",
+                price: "R$ 474",
                 period: "/semestre",
                 subtitle: "Mais previsibilidade e custo mais interessante no médio prazo.",
                 features: [
@@ -80,7 +80,7 @@ const softwareCatalog = [
             },
             {
                 name: "Licença Anual",
-                price: "R$ 1.497",
+                price: "R$ 828",
                 period: "/ano",
                 subtitle: "Pacote mais robusto para quem quer continuidade total.",
                 features: [
@@ -204,24 +204,84 @@ const softwareCatalog = [
 
 const faqs = [
     {
-        q: "Quais ferramentas estão disponíveis neste momento?",
-        a: "Atualmente a ferramenta disponível para contratação imediata é a WorkMind PSI. A WorkFISIO está com lançamento programado para 23 de março de 2026. Outras soluções permanecem fora da vitrine comercial por enquanto."
+        q: "Quais ferramentas estão disponíveis atualmente?",
+        a: "Atualmente você já pode contratar a WorkMind PSI, uma ferramenta desenvolvida para apoiar psicólogos na organização da prática clínica. A WorkFISIO tem lançamento programado para 23 de março de 2026 e em breve também estará disponível para contratação."
     },
     {
-        q: "Agora os planos ficam separados por ferramenta?",
-        a: "Sim. O site foi reorganizado para exibir os pacotes de cada software de forma separada. Isso melhora a leitura comercial e facilita muito a inclusão de novas ferramentas e novos valores depois."
+        q: "Cada ferramenta possui planos próprios?",
+        a: "Sim. Cada software possui seus próprios planos e pacotes, pensados de acordo com as necessidades da área profissional atendida. Isso permite que você escolha a solução mais adequada ao seu tipo de prática."
     },
     {
-        q: "Consigo adicionar novos pacotes futuramente?",
-        a: "Sim. A lógica foi estruturada para você adicionar novos planos diretamente no catálogo do app.js. Cada ferramenta pode ter seu próprio conjunto de preços, períodos, status e observações."
+        q: "Novos planos podem surgir no futuro?",
+        a: "Sim. As ferramentas da WorkMind Global estão em constante evolução. Novos planos, recursos e atualizações podem ser adicionados para ampliar as possibilidades de uso e oferecer ainda mais recursos profissionais."
     },
     {
-        q: "A WorkFISIO já aparece no site mesmo antes do lançamento?",
-        a: "Sim. Ela já aparece com status de lançamento e com seus blocos de pacotes preparados. Assim você já posiciona a ferramenta e depois só precisa preencher os valores finais."
+        q: "A WorkFISIO já pode ser conhecida antes do lançamento?",
+        a: "Sim. A WorkFISIO já aparece na vitrine de ferramentas para que você possa conhecer a solução e acompanhar as informações sobre o lançamento oficial e os recursos que estarão disponíveis."
     },
     {
-        q: "Os softwares continuam com proposta desktop e offline?",
-        a: "Sim. A comunicação do site continua posicionando a WorkMind Global como um ecossistema de softwares desktop, com foco em organização profissional, privacidade local e experiência premium."
+        q: "Os softwares funcionam offline?",
+        a: "Sim. As ferramentas foram projetadas com foco em uso profissional em ambiente desktop, priorizando organização do trabalho, privacidade dos dados e uma experiência estável para o dia a dia clínico."
+    },
+    {
+        q: "Para quem as ferramentas da WorkMind Global foram criadas?",
+        a: "As ferramentas foram desenvolvidas para profissionais que desejam mais organização, estrutura clínica e praticidade no registro e acompanhamento das atividades profissionais."
+    },
+    {
+        q: "Preciso de conexão constante com a internet para utilizar as ferramentas?",
+        a: "Não. As ferramentas foram pensadas para funcionamento estável em ambiente desktop, permitindo que o profissional trabalhe com tranquilidade e maior controle sobre seus dados."
+    },
+    {
+        q: "Os dados registrados nas ferramentas ficam protegidos?",
+        a: "Sim. A proposta das ferramentas é oferecer um ambiente profissional seguro, organizado e com foco na privacidade das informações registradas durante o trabalho clínico."
+    },
+    {
+        q: "As ferramentas recebem atualizações?",
+        a: "Sim. As soluções da WorkMind Global passam por melhorias contínuas, com novas funcionalidades, ajustes e aprimoramentos pensados para facilitar cada vez mais a rotina profissional."
+    },
+    {
+        q: "Posso utilizar a ferramenta mesmo trabalhando sozinho?",
+        a: "Sim. As ferramentas foram desenvolvidas para atender tanto profissionais que atuam de forma independente quanto aqueles que desejam uma estrutura mais organizada para seu trabalho."
+    },
+    {
+        q: "As ferramentas ajudam na organização dos atendimentos?",
+        a: "Sim. Um dos principais objetivos é oferecer recursos que facilitem o registro, a organização e o acompanhamento das informações relacionadas ao trabalho profissional."
+    },
+    {
+        q: "As ferramentas incluem recursos clínicos?",
+        a: "Sim. Dependendo da solução, você encontrará recursos clínicos estruturados como registros, questionários, checklists, escalas e outras ferramentas de apoio à prática profissional, lembrando que sempre é necessário uma pré avaliação do profissional para entender se pode se adaptar a demanda específica, tendo a possibilidade de adaptar esses recursos na própria ferramenta."
+    },
+    {
+        q: "Posso conhecer a ferramenta antes de contratar?",
+        a: "Sim. O site apresenta informações detalhadas sobre cada solução, permitindo que você compreenda os recursos disponíveis antes de decidir pela contratação, além de poder ter um teste gatruito para conhecer a ferramenta."
+    },
+    {
+        q: "As ferramentas são adequadas para uso profissional diário?",
+        a: "Sim. Elas foram projetadas justamente para apoiar a rotina profissional, oferecendo um ambiente organizado, intuitivo e pensado para uso frequente."
+    },
+    {
+        q: "As ferramentas fazem parte de um ecossistema maior?",
+        a: "Sim. A WorkMind Global reúne diferentes soluções profissionais que podem ser utilizadas de forma complementar, formando um ecossistema de ferramentas especializadas."
+    },
+    {
+        q: "Novas ferramentas serão lançadas no futuro?",
+        a: "Sim. O projeto WorkMind Global prevê o desenvolvimento de novas soluções voltadas para diferentes áreas profissionais, ampliando continuamente o ecossistema de ferramentas."
+    },
+    {
+        q: "As ferramentas são fáceis de utilizar?",
+        a: "Sim. A experiência de uso foi pensada para ser clara, organizada e intuitiva, permitindo que o profissional utilize os recursos com praticidade no dia a dia."
+    },
+    {
+        q: "As ferramentas ajudam a manter registros organizados?",
+        a: "Sim. Um dos principais focos das soluções é permitir que o profissional mantenha suas informações organizadas em um único ambiente estruturado."
+    },
+    {
+        q: "As ferramentas substituem completamente outros sistemas?",
+        a: "Cada ferramenta foi pensada para atender necessidades específicas da prática profissional. O objetivo é oferecer recursos úteis que complementem e aprimorem a organização do trabalho."
+    },
+    {
+        q: "Onde posso acompanhar novidades sobre as ferramentas?",
+        a: "Você pode acompanhar novidades, atualizações e lançamentos diretamente pelo site oficial da WorkMind Global."
     }
 ];
 
