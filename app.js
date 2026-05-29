@@ -14,190 +14,173 @@ const softwareCatalog = [
     {
         id: "psi",
         name: "WorkMind PSI",
-        category: "Psicologia",
-        desc: "Sistema desktop premium para psicólogos, com foco em gestão clínica, organização profissional, sigilo local e experiência visual refinada.",
-        longDesc: "A WorkMind PSI é a ferramenta disponível hoje na linha WorkMind Global. Reúne prontuário, agenda, documentos, recursos clínicos e uma apresentação muito mais profissional para a prática clínica.",
+        category: "Psicologia Clínica",
+        desc: "Software de gestão clínica para psicólogos e clínicas, com prontuário, agenda, documentos, contratos, recursos clínicos, Links Clínicos e apoio fiscal.",
+        longDesc: "A WorkMind PSI é uma ferramenta já disponível dentro do ecossistema WorkMind Global. Ela organiza a rotina clínica em um ambiente profissional, com prontuário, agenda, documentos, recursos clínicos, triagem digital, contratos, comunicação e apoio fiscal para psicólogos.",
         features: [
-            "Prontuário digital offline",
-            "Agenda clínica organizada",
-            "Documentos integrados",
-            "Recursos clínicos e histórico",
-            "Dados salvos localmente",
-            "Fluxo premium e profissional"
+            "Prontuário e histórico clínico",
+            "Agenda, sessões e documentos",
+            "Triagem digital e Links Clínicos",
+            "Contratos e recursos clínicos",
+            "Módulo fiscal e recibos",
+            "Privacidade e organização profissional"
         ],
-        audience: "Psicólogos clínicos, consultórios e clínicas",
+        audience: "Psicólogos, consultórios e clínicas",
+        platformLabel: "Desktop",
+        privacyLabel: "Privacidade local",
         status: "available",
         statusLabel: "Disponível agora",
         badge: "Disponível agora",
-        priceFrom: "A partir de R$ 99/mês",
+        priceFrom: "Planos no site oficial",
         pricingTitle: "Licenciamento WorkMind PSI",
-        pricingNote: "Ferramenta já disponível para contratação e ativação.",
-        licensingModel: "Licenças com pacotes separados por período.",
-        ctaLabel: "Quero contratar",
+        pricingNote: "Contratação, download, planos e ativação ficam no site oficial da WorkMind PSI.",
+        licensingModel: "Licenças por período",
+        ctaLabel: "Acessar site da PSI",
         ctaMessage: "Olá Macs, tenho interesse em contratar a WorkMind PSI. Gostaria de conhecer os pacotes disponíveis.",
+        externalUrl: "https://download.workmindglobal.online/",
         plans: [
             {
-                name: "Licença Mensal",
-                price: "R$ 99",
-                period: "/mês",
-                subtitle: "Entrada mais leve para começar a usar imediatamente.",
+                name: "WorkMind PSI",
+                price: "Ver planos",
+                period: "",
+                subtitle: "Acesse o site oficial da WorkMind PSI para consultar planos, download, licença e ativação.",
                 features: [
-                    "Licença para 1 computador",
-                    "Atualizações da ferramenta",
-                    "Suporte por atendimento direto",
-                    "Ideal para início rápido"
-                ],
-                highlight: false,
-                ctaLabel: "Contratar plano"
-            },
-            {
-                name: "Licença Trimestral",
-                price: "R$ 267",
-                period: "/trimestre",
-                subtitle: "Melhor equilíbrio entre investimento e continuidade.",
-                features: [
-                    "Licença para 1 computador",
-                    "Economia em relação ao mensal",
-                    "Atualizações inclusas",
-                    "Mais estabilidade de uso"
+                    "Página oficial de contratação",
+                    "Download e ativação da ferramenta",
+                    "Planos atualizados em um único lugar",
+                    "Direcionamento seguro pelo domínio oficial"
                 ],
                 highlight: true,
-                ctaLabel: "Contratar plano"
-            },
-            {
-                name: "Licença Semestral",
-                price: "R$ 474",
-                period: "/semestre",
-                subtitle: "Mais previsibilidade e custo mais interessante no médio prazo.",
-                features: [
-                    "Licença para 1 computador",
-                    "Economia progressiva",
-                    "Atualizações e suporte",
-                    "Excelente para rotina consolidada"
-                ],
-                highlight: false,
-                ctaLabel: "Contratar plano"
-            },
-            {
-                name: "Licença Anual",
-                price: "R$ 828",
-                period: "/ano",
-                subtitle: "Pacote mais robusto para quem quer continuidade total.",
-                features: [
-                    "Licença para 1 computador",
-                    "Melhor custo anual",
-                    "Atualizações inclusas",
-                    "Maior previsibilidade comercial"
-                ],
-                highlight: false,
-                ctaLabel: "Contratar plano"
+                ctaLabel: "Acessar site oficial",
+                externalUrl: "https://download.workmindglobal.online/"
             }
         ]
     },
     {
-        id: "fisio",
-        name: "WorkFISIO",
-        category: "Fisioterapia",
-        desc: "Software desktop premium para fisioterapia, com foco em organização clínica, evolução, documentos e uma experiência visual forte para posicionamento profissional.",
-        longDesc: "A WorkFISIO entra oficialmente em lançamento em 23 de março de 2026. A estrutura do site já está pronta para apresentar seus pacotes separadamente e facilitar a expansão futura.",
+        id: "perfil",
+        name: "WorkMind Perfil",
+        category: "Recrutamento e Seleção",
+        desc: "Ferramenta profissional para processos seletivos, avaliação de perfil, entrevistas estruturadas, dinâmicas, competências e relatórios de seleção.",
+        longDesc: "A WorkMind Perfil é uma ferramenta já lançada para apoiar consultorias, psicólogos organizacionais e profissionais de RH em avaliações de perfil, entrevistas, dinâmicas, competências e relatórios de seleção com apresentação mais profissional.",
         features: [
-            "Cadastro de pacientes",
-            "Avaliação e evolução",
-            "Documentos integrados",
-            "Atlas corporal e recursos visuais",
-            "Operação offline",
-            "Experiência premium para clínica"
+            "Avaliação de perfil profissional",
+            "Entrevista estruturada",
+            "Dinâmicas de grupo",
+            "Matriz de competências",
+            "Relatórios individuais e completos",
+            "Apoio para recrutamento e seleção"
         ],
-        audience: "Fisioterapeutas e clínicas",
-        status: "launching",
-        statusLabel: "Lançamento em 20/04/2026",
-        badge: "Lançamento 20/04",
-        priceFrom: "Pacotes em preparação",
-        pricingTitle: "Licenciamento WorkFISIO",
-        pricingNote: "Ferramenta com lançamento previsto para 20 de abril de 2026.",
-        licensingModel: "Estrutura pronta para receber seus preços finais.",
-        ctaLabel: "Entrar na lista",
-        ctaMessage: "Olá Macs, quero entrar na lista de espera da WorkFISIO e receber informações sobre o lançamento.",
+        audience: "RH, consultorias e psicólogos organizacionais",
+        platformLabel: "Web profissional",
+        privacyLabel: "Acesso por login",
+        status: "available",
+        statusLabel: "Disponível agora",
+        badge: "Disponível agora",
+        priceFrom: "Sob consulta",
+        pricingTitle: "Licenciamento WorkMind Perfil",
+        pricingNote: "Ferramenta já lançada. A contratação pode ser solicitada diretamente pelo atendimento comercial.",
+        licensingModel: "Licença sob consulta",
+        ctaLabel: "Solicitar apresentação",
+        ctaMessage: "Olá Macs, tenho interesse na WorkMind Perfil. Gostaria de conhecer a ferramenta, os planos e a forma de contratação.",
         plans: [
             {
-                name: "Licença Mensal",
-                price: "Em breve",
+                name: "WorkMind Perfil",
+                price: "Sob consulta",
                 period: "",
-                subtitle: "Pacote previsto para o lançamento da ferramenta.",
+                subtitle: "Licenciamento para profissionais e consultorias que atuam com recrutamento, seleção e avaliação de perfil.",
                 features: [
-                    "Estrutura preparada no site",
-                    "Período mensal separado",
-                    "CTA para lista de espera",
-                    "Pronto para receber valor final"
-                ],
-                highlight: false,
-                ctaLabel: "Entrar na lista"
-            },
-            {
-                name: "Licença Trimestral",
-                price: "Em breve",
-                period: "",
-                subtitle: "Opção já separada para você preencher quando definir o preço.",
-                features: [
-                    "Bloco trimestral pronto",
-                    "Layout já adaptado",
-                    "Fácil atualização no catálogo",
-                    "Exibição separada por ferramenta"
+                    "Apresentação da ferramenta",
+                    "Orientação sobre módulos disponíveis",
+                    "Condições comerciais sob consulta",
+                    "Atendimento direto pelo WhatsApp"
                 ],
                 highlight: true,
-                ctaLabel: "Entrar na lista"
-            },
-            {
-                name: "Licença Semestral",
-                price: "Em breve",
-                period: "",
-                subtitle: "Estrutura visual pronta para receber pacote semestral.",
-                features: [
-                    "Card pronto para uso",
-                    "Ajuste simples no app.js",
-                    "Visual premium mantido",
-                    "Separação clara por software"
-                ],
-                highlight: false,
-                ctaLabel: "Entrar na lista"
-            },
-            {
-                name: "Licença Anual",
-                price: "Em breve",
-                period: "",
-                subtitle: "Opção anual já preparada para lançamento e expansão futura.",
-                features: [
-                    "Bloco anual pronto",
-                    "Fácil manutenção",
-                    "Mesma linguagem comercial",
-                    "Ideal para expansão posterior"
-                ],
-                highlight: false,
-                ctaLabel: "Entrar na lista"
+                ctaLabel: "Solicitar apresentação"
             }
         ]
     },
     {
         id: "sst",
         name: "WorkMind SST",
-        category: "SST",
-        desc: "Linha estratégica prevista para expansão futura dentro do ecossistema WorkMind Global.",
-        longDesc: "A WorkMind SST não está disponível neste momento. Ela permanece apenas como parte do roadmap futuro da marca, sem exibição comercial como ferramenta pronta.",
+        category: "SST e Riscos Psicossociais",
+        desc: "Projeto em desenvolvimento para avaliação de riscos psicossociais, organização técnica, relatórios e apoio à rotina de SST.",
+        longDesc: "A WorkMind SST faz parte do roadmap da WorkMind Global e será posicionada como uma solução para avaliação de riscos psicossociais, organização técnica e geração de relatórios para profissionais e consultorias de SST.",
         features: [
-            "Roadmap futuro",
-            "Apresentação institucional",
-            "Sem oferta comercial atual"
+            "Avaliação de riscos psicossociais",
+            "Matriz de risco",
+            "Relatórios técnicos",
+            "Organização de evidências",
+            "Planejamento para SST",
+            "Disponibilidade futura"
         ],
-        audience: "Empresas e área técnica",
+        audience: "Consultorias, empresas e profissionais de SST",
+        platformLabel: "Projeto futuro",
+        privacyLabel: "Em desenvolvimento",
         status: "coming_soon",
-        statusLabel: "Em desenvolvimento",
+        statusLabel: "Em breve",
         badge: "Em breve",
-        priceFrom: "Não disponível agora",
-        pricingTitle: "Expansão futura",
-        pricingNote: "Sem exibição de pacotes comerciais neste momento.",
-        licensingModel: "Ferramenta fora da vitrine de contratação atual.",
-        ctaLabel: "Falar no WhatsApp",
-        ctaMessage: "Olá Macs, gostaria de saber sobre o roadmap futuro da WorkMind SST.",
+        priceFrom: "Ainda não disponível",
+        pricingTitle: "WorkMind SST",
+        pricingNote: "Projeto em desenvolvimento, sem contratação aberta neste momento.",
+        licensingModel: "Roadmap futuro",
+        ctaLabel: "Acompanhar projeto",
+        ctaMessage: "Olá Macs, gostaria de acompanhar novidades sobre a WorkMind SST.",
+        plans: []
+    },
+    {
+        id: "people",
+        name: "WorkMind People",
+        category: "RH e Gestão de Pessoas",
+        desc: "Projeto em desenvolvimento para rotinas de RH, gestão de pessoas, ponto, treinamento, desempenho e organização de processos internos.",
+        longDesc: "A WorkMind People está prevista como uma solução futura do ecossistema WorkMind Global para apoiar rotinas de RH, gestão de pessoas, treinamento, desempenho, jornada e organização interna.",
+        features: [
+            "Gestão de colaboradores",
+            "Ponto e jornada",
+            "Treinamentos",
+            "Avaliação de desempenho",
+            "Solicitações internas",
+            "Disponibilidade futura"
+        ],
+        audience: "Empresas, RH e consultorias",
+        platformLabel: "Projeto futuro",
+        privacyLabel: "Em desenvolvimento",
+        status: "coming_soon",
+        statusLabel: "Em breve",
+        badge: "Em breve",
+        priceFrom: "Ainda não disponível",
+        pricingTitle: "WorkMind People",
+        pricingNote: "Projeto em desenvolvimento, sem contratação aberta neste momento.",
+        licensingModel: "Roadmap futuro",
+        ctaLabel: "Acompanhar projeto",
+        ctaMessage: "Olá Macs, gostaria de acompanhar novidades sobre a WorkMind People.",
+        plans: []
+    },
+    {
+        id: "fisio",
+        name: "WorkFISIO",
+        category: "Fisioterapia",
+        desc: "Projeto futuro para organização clínica de fisioterapeutas, com cadastro de pacientes, evolução, documentos e recursos visuais.",
+        longDesc: "A WorkFISIO permanece como projeto futuro dentro da WorkMind Global. Ela ainda não está disponível para contratação, mas faz parte da expansão planejada do ecossistema.",
+        features: [
+            "Cadastro de pacientes",
+            "Avaliação e evolução",
+            "Documentos integrados",
+            "Recursos visuais",
+            "Projeto em desenvolvimento",
+            "Disponibilidade futura"
+        ],
+        audience: "Fisioterapeutas e clínicas",
+        platformLabel: "Projeto futuro",
+        privacyLabel: "Em desenvolvimento",
+        status: "coming_soon",
+        statusLabel: "Em breve",
+        badge: "Em breve",
+        priceFrom: "Ainda não disponível",
+        pricingTitle: "WorkFISIO",
+        pricingNote: "Projeto futuro, sem contratação aberta neste momento.",
+        licensingModel: "Roadmap futuro",
+        ctaLabel: "Acompanhar projeto",
+        ctaMessage: "Olá Macs, gostaria de acompanhar novidades sobre a WorkFISIO.",
         plans: []
     }
 ];
@@ -205,83 +188,35 @@ const softwareCatalog = [
 const faqs = [
     {
         q: "Quais ferramentas estão disponíveis atualmente?",
-        a: "Atualmente você já pode contratar a WorkMind PSI, uma ferramenta desenvolvida para apoiar psicólogos na organização da prática clínica. A WorkFISIO tem lançamento programado para 23 de março de 2026 e em breve também estará disponível para contratação."
+        a: "Atualmente, as ferramentas lançadas dentro da WorkMind Global são a WorkMind PSI e a WorkMind Perfil. As demais soluções aparecem como projetos em desenvolvimento ou em breve."
+    },
+    {
+        q: "Onde contrato ou baixo a WorkMind PSI?",
+        a: "A contratação, o download e a ativação da WorkMind PSI ficam no site oficial download.workmindglobal.online. O site da WorkMind Global funciona como apresentação do ecossistema e direciona para a página correta da ferramenta."
+    },
+    {
+        q: "A WorkMind Perfil já está disponível?",
+        a: "Sim. A WorkMind Perfil já foi lançada e pode ser apresentada para profissionais de RH, consultorias e psicólogos organizacionais interessados em avaliação de perfil e processos seletivos."
+    },
+    {
+        q: "As outras ferramentas já podem ser contratadas?",
+        a: "Não. WorkMind SST, WorkMind People e WorkFISIO devem aparecer como projetos em breve, sem promessa de contratação imediata."
     },
     {
         q: "Cada ferramenta possui planos próprios?",
-        a: "Sim. Cada software possui seus próprios planos e pacotes, pensados de acordo com as necessidades da área profissional atendida. Isso permite que você escolha a solução mais adequada ao seu tipo de prática."
+        a: "Sim. Cada solução pode ter uma estrutura comercial própria, com planos, licenças, apresentação e contratação separadas conforme o estágio de lançamento."
     },
     {
-        q: "Novos planos podem surgir no futuro?",
-        a: "Sim. As ferramentas da WorkMind Global estão em constante evolução. Novos planos, recursos e atualizações podem ser adicionados para ampliar as possibilidades de uso e oferecer ainda mais recursos profissionais."
-    },
-    {
-        q: "A WorkFISIO já pode ser conhecida antes do lançamento?",
-        a: "Sim. A WorkFISIO já aparece na vitrine de ferramentas para que você possa conhecer a solução e acompanhar as informações sobre o lançamento oficial e os recursos que estarão disponíveis."
-    },
-    {
-        q: "Os softwares funcionam offline?",
-        a: "Sim. As ferramentas foram projetadas com foco em uso profissional em ambiente desktop, priorizando organização do trabalho, privacidade dos dados e uma experiência estável para o dia a dia clínico."
-    },
-    {
-        q: "Para quem as ferramentas da WorkMind Global foram criadas?",
-        a: "As ferramentas foram desenvolvidas para profissionais que desejam mais organização, estrutura clínica e praticidade no registro e acompanhamento das atividades profissionais."
-    },
-    {
-        q: "Preciso de conexão constante com a internet para utilizar as ferramentas?",
-        a: "Não. As ferramentas foram pensadas para funcionamento estável em ambiente desktop, permitindo que o profissional trabalhe com tranquilidade e maior controle sobre seus dados."
-    },
-    {
-        q: "Os dados registrados nas ferramentas ficam protegidos?",
-        a: "Sim. A proposta das ferramentas é oferecer um ambiente profissional seguro, organizado e com foco na privacidade das informações registradas durante o trabalho clínico."
-    },
-    {
-        q: "As ferramentas recebem atualizações?",
-        a: "Sim. As soluções da WorkMind Global passam por melhorias contínuas, com novas funcionalidades, ajustes e aprimoramentos pensados para facilitar cada vez mais a rotina profissional."
-    },
-    {
-        q: "Posso utilizar a ferramenta mesmo trabalhando sozinho?",
-        a: "Sim. As ferramentas foram desenvolvidas para atender tanto profissionais que atuam de forma independente quanto aqueles que desejam uma estrutura mais organizada para seu trabalho."
-    },
-    {
-        q: "As ferramentas ajudam na organização dos atendimentos?",
-        a: "Sim. Um dos principais objetivos é oferecer recursos que facilitem o registro, a organização e o acompanhamento das informações relacionadas ao trabalho profissional."
-    },
-    {
-        q: "As ferramentas incluem recursos clínicos?",
-        a: "Sim. Dependendo da solução, você encontrará recursos clínicos estruturados como registros, questionários, checklists, escalas e outras ferramentas de apoio à prática profissional, lembrando que sempre é necessário uma pré avaliação do profissional para entender se pode se adaptar a demanda específica, tendo a possibilidade de adaptar esses recursos na própria ferramenta."
-    },
-    {
-        q: "Posso conhecer a ferramenta antes de contratar?",
-        a: "Sim. O site apresenta informações detalhadas sobre cada solução, permitindo que você compreenda os recursos disponíveis antes de decidir pela contratação, além de poder ter um teste gatruito para conhecer a ferramenta."
-    },
-    {
-        q: "As ferramentas são adequadas para uso profissional diário?",
-        a: "Sim. Elas foram projetadas justamente para apoiar a rotina profissional, oferecendo um ambiente organizado, intuitivo e pensado para uso frequente."
+        q: "As ferramentas funcionam offline?",
+        a: "A WorkMind PSI tem foco em operação desktop e privacidade local. Outras soluções podem ter recursos online específicos, conforme a proposta de cada ferramenta."
     },
     {
         q: "As ferramentas fazem parte de um ecossistema maior?",
-        a: "Sim. A WorkMind Global reúne diferentes soluções profissionais que podem ser utilizadas de forma complementar, formando um ecossistema de ferramentas especializadas."
-    },
-    {
-        q: "Novas ferramentas serão lançadas no futuro?",
-        a: "Sim. O projeto WorkMind Global prevê o desenvolvimento de novas soluções voltadas para diferentes áreas profissionais, ampliando continuamente o ecossistema de ferramentas."
-    },
-    {
-        q: "As ferramentas são fáceis de utilizar?",
-        a: "Sim. A experiência de uso foi pensada para ser clara, organizada e intuitiva, permitindo que o profissional utilize os recursos com praticidade no dia a dia."
-    },
-    {
-        q: "As ferramentas ajudam a manter registros organizados?",
-        a: "Sim. Um dos principais focos das soluções é permitir que o profissional mantenha suas informações organizadas em um único ambiente estruturado."
-    },
-    {
-        q: "As ferramentas substituem completamente outros sistemas?",
-        a: "Cada ferramenta foi pensada para atender necessidades específicas da prática profissional. O objetivo é oferecer recursos úteis que complementem e aprimorem a organização do trabalho."
+        a: "Sim. A WorkMind Global reúne soluções digitais especializadas para Psicologia, RH, SST e áreas profissionais relacionadas, com identidade própria e expansão gradual."
     },
     {
         q: "Onde posso acompanhar novidades sobre as ferramentas?",
-        a: "Você pode acompanhar novidades, atualizações e lançamentos diretamente pelo site oficial da WorkMind Global."
+        a: "Você pode acompanhar novidades, atualizações e lançamentos pelo site oficial da WorkMind Global e pelos canais profissionais vinculados à marca."
     }
 ];
 
@@ -423,6 +358,15 @@ function getWhatsAppLink(message) {
     return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
+function getActionLink(item, fallbackMessage) {
+    if (item && item.externalUrl) return item.externalUrl;
+    return getWhatsAppLink(fallbackMessage || item?.ctaMessage || "Olá Macs, gostaria de saber mais sobre a WorkMind Global.");
+}
+
+function getActionTarget(item) {
+    return item && item.externalUrl ? "_self" : "_blank";
+}
+
 /* --- Renderização de Produtos --- */
 const productsGrid = document.getElementById('products-grid');
 const searchInput = document.getElementById('search-input');
@@ -459,8 +403,8 @@ function renderProducts() {
                 <p class="product-copy">${product.desc}</p>
 
                 <div class="product-meta">
-                    <span class="meta-chip"><i class="ph ph-monitor"></i> Desktop</span>
-                    <span class="meta-chip"><i class="ph ph-lock-key"></i> Offline</span>
+                    <span class="meta-chip"><i class="ph ph-monitor"></i> ${product.platformLabel || "Solução digital"}</span>
+                    <span class="meta-chip"><i class="ph ph-lock-key"></i> ${product.privacyLabel || "Uso profissional"}</span>
                     <span class="meta-chip"><i class="ph ph-user-circle"></i> ${product.audience}</span>
                 </div>
 
@@ -477,7 +421,7 @@ function renderProducts() {
                     <strong>${product.priceFrom}</strong>
                 </div>
                 <button onclick="openModal('${product.id}')" class="btn ${product.status === 'available' ? 'btn-primary' : 'btn-outline'} full-width">
-                    ${product.status === 'available' ? 'Ver detalhes' : product.status === 'launching' ? 'Ver lançamento' : 'Conhecer roadmap'}
+                    ${product.status === 'available' ? 'Ver detalhes' : 'Ver previsão'}
                 </button>
             </div>
         </div>
@@ -536,8 +480,8 @@ window.openModal = (id) => {
 
     if (ctaBtn) {
         ctaBtn.innerText = product.ctaLabel;
-        ctaBtn.href = getWhatsAppLink(product.ctaMessage);
-        ctaBtn.target = "_blank";
+        ctaBtn.href = getActionLink(product, product.ctaMessage);
+        ctaBtn.target = getActionTarget(product);
         ctaBtn.classList.remove('btn-primary', 'btn-outline');
         ctaBtn.classList.add(product.status === 'available' ? 'btn-primary' : 'btn-outline');
     }
@@ -566,7 +510,7 @@ function renderSoftwareSelector() {
         <button class="software-chip ${tool.id === selectedSoftwareId ? 'active' : ''}" data-software-id="${tool.id}">
             <div class="chip-title">
                 <span>${tool.name}</span>
-                <span class="chip-status ${getStatusClass(tool.status)}">${tool.status === 'available' ? 'Agora' : tool.status === 'launching' ? 'Lançamento' : 'Roadmap'}</span>
+                <span class="chip-status ${getStatusClass(tool.status)}">${tool.status === 'available' ? 'Agora' : 'Em breve'}</span>
             </div>
             <small>${tool.statusLabel}</small>
         </button>
@@ -619,7 +563,7 @@ function renderPricing() {
                 ${plan.features.map(feature => `<li><i class="ph ph-check-circle"></i><span>${feature}</span></li>`).join('')}
             </ul>
 
-            <a href="${getWhatsAppLink(`Olá Macs, tenho interesse no plano ${plan.name} da ${selected.name}.`)}" target="_blank" class="btn ${plan.highlight || selected.status === 'available' ? 'btn-primary' : 'btn-outline'} full-width">
+            <a href="${getActionLink(plan, `Olá Macs, tenho interesse no plano ${plan.name} da ${selected.name}.`)}" target="${getActionTarget(plan)}" class="btn ${plan.highlight || selected.status === 'available' ? 'btn-primary' : 'btn-outline'} full-width">
                 ${plan.ctaLabel || selected.ctaLabel}
             </a>
         </div>
